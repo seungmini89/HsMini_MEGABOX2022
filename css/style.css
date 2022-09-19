@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&family=Noto+Sans+KR:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button, img {
+  border: 0;
+}
+
+#skip {
+  position: relative;
+  width: 100%;
+}
+#skip a {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  background: #333;
+  border: 1px solid #fff;
+  color: #fff;
+  line-height: 30px;
+  text-align: center;
+}
+#skip a:active, #skip a:focus {
+  top: 0;
+  z-index: 10;
+}
+
+body {
+  height: 4000px;
+  background: rgb(236, 255, 251);
+  font-size: 16px;
+}
+
+#container {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  margin: 0 12px;
+}
+
+.headerTop_ad {
+  position: relative;
+  background: #000;
+  width: 100%;
+  height: 80px;
+  z-index: 3;
+}
+.headerTop_ad .headerTop_box {
+  width: 1200px;
+  height: 100%;
+  position: absolute;
+}
+.headerTop_ad .headerTop_box a img {
+  width: 100%;
+}
+.headerTop_ad .headerTop_box .fa-solid {
+  position: absolute;
+  bottom: 33px;
+  right: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 18px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+#header {
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  z-index: 5;
+}
+#header .headerMain {
+  width: 100%;
+  height: 75px;
+  border-bottom: 1px solid #eaeaea;
+  font: 14px/1 "Noto Sans KR";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header .headerMain .ci {
+  order: 2;
+  width: 140px;
+  height: 47px;
+  background: url("../img/mega-logo-white.png") no-repeat;
+}
+#header .headerMain .ci a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#header .headerMain .headerTop_left {
+  order: 1;
+  margin-bottom: -25px;
+}
+#header .headerMain .headerTop_left a {
+  margin-right: 20px;
+  color: #fff;
+}
+#header .headerMain .headerTop_right {
+  order: 3;
+  margin-bottom: -25px;
+}
+#header .headerMain .headerTop_right a {
+  margin-left: 20px;
+  color: #fff;
+}
+#header .headerMenu {
+  position: relative;
+  display: flex;
+}
+#header .headerMenu .gnb {
+  position: absolute;
+  left: 0;
+  margin-top: 12px;
+}
+#header .headerMenu .gnb ul {
+  display: flex;
+  flex-direction: row;
+}
+#header .headerMenu .gnb ul li {
+  margin-right: 50px;
+}
+#header .headerMenu .gnb ul li a {
+  font: 500 16px/1 "Noto Sans KR";
+  color: #fff;
+}
+#header .headerMenu .header_icon {
+  position: absolute;
+  right: 0;
+  margin-top: 12px;
+}
+#header .headerMenu .header_icon ul {
+  display: flex;
+  flex-direction: row;
+}
+#header .headerMenu .header_icon ul li {
+  margin-left: 30px;
+}
+#header .headerMenu .header_icon ul li a .fa-solid {
+  font-size: 20px;
+  color: #fff;
+}
+
+#header:hover {
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+#header:hover .headerMain {
+  border-bottom: 1px solid #b7afd2;
+  transition: 0.3s;
+}
+#header:hover .headerMain .ci {
+  background: url("../img/mega-logo-purple.png") no-repeat;
+  transition: 0.3s;
+}
+#header:hover .headerMain .headerTop_left a, #header:hover .headerMain .headerTop_right a {
+  color: #3c2a78;
+  transition: 0.3s;
+}
+#header:hover .headerMenu .gnb ul li a, #header:hover .headerMenu .header_icon ul li a .fa-solid {
+  color: #3c2a78;
+  transition: 0.3s;
+}
+
+#header_video {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 900px;
+  z-index: 0;
+  overflow: hidden;
+}
+#header_video::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 75%, rgb(0, 0, 0) 100%);
+}
+#header_video::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 85%, rgb(0, 0, 0) 100%);
+}
+#header_video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#header_video .secMain {
+  position: absolute;
+  top: 35%;
+  z-index: 1;
+}
+#header_video .secMain p {
+  font: 500 35px/1.3 "Noto Sans KR";
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#header_video .secMain strong {
+  font: 700 70px/1.8 "Noto Sans KR";
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#header_video .secMain .videoContr {
+  display: flex;
+  flex-direction: row;
+}
+#header_video .secMain .videoContr .videoDetail {
+  width: 85px;
+  height: 36px;
+  border-radius: 15px;
+  border: 1px solid #fff;
+  color: #fff;
+  font: 18px/1.8 "Noto Sans KR";
+  text-align: center;
+}
+#header_video .secMain .videoContr .videoDetail:hover {
+  background: #fff;
+  border: none;
+  color: #000;
+}
+#header_video .secMain .videoContr a {
+  margin-right: 20px;
+}
+#header_video .secMain .videoContr a i {
+  color: #fff;
+  font-size: 35px;
+}
+
+#header_bottom {
+  width: 100%;
+  height: 580px;
+  background: #000;
+}
+#header_bottom .moveMouse {
+  position: relative;
+}
+#header_bottom .moveMouse .fa-computer-mouse {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin: 0 0 0 -6px;
+  font-size: 22px;
+  color: #777;
+  animation: motionM 0.8s linear 0s infinite alternate;
+}
+#header_bottom .boxOffice {
+  padding: 35px 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+#header_bottom .boxOffice .boxLank p {
+  margin-right: 14px;
+  display: inline;
+  font: 400 30px/1 "Noto Sans KR";
+  color: #aaa;
+  letter-spacing: -1px;
+}
+#header_bottom .boxOffice .boxMore a {
+  margin-right: 3px;
+  font: 400 20px/1.9 "Noto Sans KR";
+  color: #aaa;
+}
+#header_bottom .boxOffice .boxMore a i.fa-plus {
+  color: #aaa;
+}
+#header_bottom .boxLank_poster ul {
+  display: flex;
+  justify-content: space-between;
+}
+#header_bottom .boxLank_poster ul li {
+  position: relative;
+  width: 270px;
+  height: 380px;
+  border-radius: 10px;
+}
+#header_bottom .boxLank_poster ul li .posterArea {
+  position: relative;
+  width: 270px;
+  height: 380px;
+}
+#header_bottom .boxLank_poster ul li .posterArea .posterLanking {
+  position: absolute;
+  bottom: -6px;
+  left: 10px;
+  font: 700 5em/1 "Nanum Gothic";
+  color: #fff;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+#header_bottom .boxLank_poster ul li .posterArea img {
+  border-radius: 10px;
+}
+#header_bottom .boxLank_poster ul li .posterArea .posterDetail {
+  position: absolute;
+  padding: 30px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  opacity: 0;
+  transition: 0.3s;
+}
+#header_bottom .boxLank_poster ul li .posterArea .posterDetail a {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 18px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font: 400 18px/2 "Noto Sans KR";
+  color: #fff;
+  text-align: center;
+}
+#header_bottom .boxLank_poster ul li .posterArea .posterDetail .movieTicket:hover {
+  border: 0;
+  background: #3c2a78;
+}
+#header_bottom .boxLank_poster ul li .posterArea .posterDetail:hover {
+  opacity: 1;
+}
+#header_bottom .boxLank_poster ul li .movieInfo {
+  margin-top: 18px;
+  text-align: center;
+}
+#header_bottom .boxLank_poster ul li .movieInfo .movieTit {
+  font: 500 26px/1 "Noto Sans KR";
+  color: #eee;
+  margin-bottom: 10px;
+}
+#header_bottom .boxLank_poster ul li .movieInfo .movieScore {
+  font: 400 16px/1 "Noto Sans KR";
+  color: #ccc;
+}
+#header_bottom .boxLank_poster ul li .movieInfo .movieScore span {
+  margin-left: 10px;
+  font: 400 14px/1 "Noto Sans KR";
+  color: #ffff00;
+}
+#header_bottom .boxLank_poster ul li .movieInfo .movieScore span .fa-heart {
+  color: #ccc;
+}
+
+@keyframes motionM {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #container {
+    width: 100%;
+  }
+  .headerTop_ad {
+    display: none;
+  }
+  #header {
+    width: 100%;
+  }
+  #header .headerMain .headerTop_left {
+    padding-left: 20px;
+  }
+  #header .headerMain .headerTop_right {
+    padding-right: 20px;
+  }
+  #header .headerMenu .gnb {
+    padding-left: 20px;
+  }
+  #header .headerMenu .header_icon {
+    padding-right: 20px;
+  }
+  #header_video {
+    top: 0;
+  }
+  #header_video .secMain {
+    padding-left: 40px;
+  }
+  #header_bottom .boxOffice .boxLank {
+    padding-left: 20px;
+  }
+  #header_bottom .boxOffice .boxMore {
+    padding-right: 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
