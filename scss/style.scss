@@ -38,7 +38,7 @@ body {
   width: 1200px;
   height: 100%;
   margin: 0 auto;
-  // background: rgba(0,0,0,.2);
+  background: rgba(0,0,0,.2);
 }
 .row {
   margin: 0 12px;
@@ -302,6 +302,7 @@ body {
     ul {
       display: flex;
       justify-content: space-between;
+      flex-flow: wrap;
       li {
         position: relative;
         width: 270px;
@@ -309,9 +310,7 @@ body {
         border-radius: 10px;
         .posterArea {
           position: relative;
-          width: 270px;
-          height: 380px;
-          // overflow: hidden;
+          height: 100%;
           .posterLanking {
             position: absolute;
             bottom: -6px;
@@ -339,7 +338,6 @@ body {
             transition: .3s;
             a {
               display: block;
-              width: 100%;
               height: 40px;
               margin-bottom: 18px;
               border: 1px solid #fff;
@@ -382,6 +380,7 @@ body {
     }
   }
 }
+
 @keyframes motionM {
   0% { margin-top: 0;}
   100% { margin-top: 15px;}
@@ -389,7 +388,7 @@ body {
 
 // 미디어쿼리 (반응형)
 @media screen and ( max-width: 1200px) {
-  #container {
+  .container {
     width: 100%;
   }
   .headerTop_ad {
@@ -421,12 +420,15 @@ body {
     }
   }
   #header_bottom {
+    .boxLank_poster {
+      padding: 0 $rowPadding 0;
+    }
     .boxOffice {
       .boxLank {
-        padding-left: $rowPadding;
+        padding-left: 40px;
       }
       .boxMore {
-        padding-right: $rowPadding;
+        padding-right: 40px;
       }
     }
   }
