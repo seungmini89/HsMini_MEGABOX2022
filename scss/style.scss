@@ -154,29 +154,29 @@ body {
       }
     }
   }
-}
-#header:hover {
-  background: #fff;
-  box-shadow: 0 5px 18px rgba(0,0,0,.3);
-  transition: $hoverSec;
-  .headerMain {
-    border-bottom: 1px solid #b7afd2;
+  &:hover {
+    background: #fff;
+    box-shadow: 0 5px 18px rgba(0,0,0,.3);
     transition: $hoverSec;
-    .ci {
-      background: url("../img/mega-logo-purple.png") no-repeat;
+    .headerMain {
+      border-bottom: 1px solid #b7afd2;
       transition: $hoverSec;
+      .ci {
+        background: url("../img/mega-logo-purple.png") no-repeat;
+        transition: $hoverSec;
+      }
+      .headerTop_left, .headerTop_right {
+        a {
+          color: #3c2a78;
+          transition: $hoverSec;
+        }
+      }
     }
-    .headerTop_left, .headerTop_right {
-      a {
+    .headerMenu {
+      .gnb ul li a, .header_icon ul li a .fa-solid {
         color: #3c2a78;
         transition: $hoverSec;
       }
-    }
-  }
-  .headerMenu {
-    .gnb ul li a, .header_icon ul li a .fa-solid {
-      color: #3c2a78;
-      transition: $hoverSec;
     }
   }
 }
@@ -260,7 +260,7 @@ body {
 // 헤더_영화랭킹
 #header_bottom {
   width: 100%;
-  height: 580px;
+  height: 640px;
   background: #000;
   .moveMouse {
     position: relative;
@@ -279,20 +279,22 @@ body {
     display: flex;
     justify-content: space-between;
     .boxLank {
-      p {
+      a {
         margin-right: 14px;
-        display: inline;
         font: 400 30px/1 "Noto Sans KR";
         color: #aaa;
-        letter-spacing: -1px;
       }
     }
     .boxMore {
       a {
-        margin-right: 3px;
         font: 400 20px/1.9 "Noto Sans KR";
         color: #aaa;
+        &:hover {
+          text-decoration: underline;
+          color: #ccc;
+        }
         i.fa-plus {
+          margin-left: 5px;
           color: #aaa;
         }
       }
@@ -381,6 +383,33 @@ body {
   }
 }
 
+// 혜택
+#section01 {
+  height: 600px;
+  background: #777;
+  .benefit {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    .benefitTit {
+      font: 400 30px/1 "Noto Sans KR";
+      color: #aaa;
+    }
+    .benefitMore {
+      font: 400 20px/1.9 "Noto Sans KR";
+      color: #aaa;
+      &:hover {
+        text-decoration: underline;
+        color: #ccc;
+      }
+      .fa-plus {
+        margin-left: 5px;
+        color: #aaa;
+      }
+    }
+  }
+}
+
 @keyframes motionM {
   0% { margin-top: 0;}
   100% { margin-top: 15px;}
@@ -420,6 +449,7 @@ body {
     }
   }
   #header_bottom {
+    height: 1140px;
     .boxLank_poster {
       padding: 0 $rowPadding 0;
     }
@@ -429,6 +459,88 @@ body {
       }
       .boxMore {
         padding-right: 40px;
+      }
+    }
+  }
+  #section01 {
+    .benefit {
+      .benefitTit {
+        padding-left: 40px;
+      }
+      .benefitMore {
+        padding-right: 40px;
+        }
+      }
+    }
+}
+
+
+@media screen and ( max-width: 450px) {
+  #header {
+    position: fixed;
+    top: 0;
+    background: #000;
+    box-shadow: 0 2px 4px rgba(0,0,0,.4);
+    // pointer-events: none;
+    .headerMain {
+      justify-content: center;
+      .headerTop_left {
+        display: none;
+      }
+      .headerTop_right {
+        display: none;
+      }
+    }
+    .headerMenu {
+      .gnb {
+        display: none;
+      }
+    }
+  }
+  #header_video {
+    .secMain {
+      top: 50%;
+      p {
+        font: 500 23px/1.3 "Noto Sans KR";
+      }
+      strong {
+        font: 700 50px/1.8 "Noto Sans KR";
+      }
+    }
+  }
+  #header_bottom {
+    height: 900px;
+    .moveMouse {
+      .fa-computer-mouse {
+        top: -60px;
+      }
+    }
+    .boxOffice {
+      .boxLank {
+        padding-left: $rowPadding;
+        a {
+          font: 400 20px/1 "Noto Sans KR";
+        }
+      }
+      .boxMore {
+        padding-right: $rowPadding;
+        a {
+          font: 400 20px/1 "Noto Sans KR";
+        }
+      }
+    }
+    .boxLank_poster {
+      ul {
+        li {
+          width: 200px;
+          height: 279px;
+          margin-bottom: 120px;
+          .posterArea {
+            img {
+              width: 100%;
+            }
+          }
+        }
       }
     }
   }

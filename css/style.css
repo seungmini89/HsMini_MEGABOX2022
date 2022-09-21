@@ -162,7 +162,6 @@ body {
   font-size: 20px;
   color: #fff;
 }
-
 #header:hover {
   background: #fff;
   box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3);
@@ -262,7 +261,7 @@ body {
 
 #header_bottom {
   width: 100%;
-  height: 580px;
+  height: 640px;
   background: #000;
 }
 #header_bottom .moveMouse {
@@ -282,19 +281,21 @@ body {
   display: flex;
   justify-content: space-between;
 }
-#header_bottom .boxOffice .boxLank p {
+#header_bottom .boxOffice .boxLank a {
   margin-right: 14px;
-  display: inline;
   font: 400 30px/1 "Noto Sans KR";
   color: #aaa;
-  letter-spacing: -1px;
 }
 #header_bottom .boxOffice .boxMore a {
-  margin-right: 3px;
   font: 400 20px/1.9 "Noto Sans KR";
   color: #aaa;
 }
+#header_bottom .boxOffice .boxMore a:hover {
+  text-decoration: underline;
+  color: #ccc;
+}
 #header_bottom .boxOffice .boxMore a i.fa-plus {
+  margin-left: 5px;
   color: #aaa;
 }
 #header_bottom .boxLank_poster ul {
@@ -377,6 +378,32 @@ body {
   color: #ccc;
 }
 
+#section01 {
+  height: 600px;
+  background: #777;
+}
+#section01 .benefit {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+#section01 .benefit .benefitTit {
+  font: 400 30px/1 "Noto Sans KR";
+  color: #aaa;
+}
+#section01 .benefit .benefitMore {
+  font: 400 20px/1.9 "Noto Sans KR";
+  color: #aaa;
+}
+#section01 .benefit .benefitMore:hover {
+  text-decoration: underline;
+  color: #ccc;
+}
+#section01 .benefit .benefitMore .fa-plus {
+  margin-left: 5px;
+  color: #aaa;
+}
+
 @keyframes motionM {
   0% {
     margin-top: 0;
@@ -413,6 +440,9 @@ body {
   #header_video .secMain {
     padding-left: 40px;
   }
+  #header_bottom {
+    height: 1140px;
+  }
   #header_bottom .boxLank_poster {
     padding: 0 20px 0;
   }
@@ -421,6 +451,67 @@ body {
   }
   #header_bottom .boxOffice .boxMore {
     padding-right: 40px;
+  }
+  #section01 .benefit .benefitTit {
+    padding-left: 40px;
+  }
+  #section01 .benefit .benefitMore {
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #header {
+    position: fixed;
+    top: 0;
+    background: #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  #header .headerMain {
+    justify-content: center;
+  }
+  #header .headerMain .headerTop_left {
+    display: none;
+  }
+  #header .headerMain .headerTop_right {
+    display: none;
+  }
+  #header .headerMenu .gnb {
+    display: none;
+  }
+  #header_video .secMain {
+    top: 50%;
+  }
+  #header_video .secMain p {
+    font: 500 23px/1.3 "Noto Sans KR";
+  }
+  #header_video .secMain strong {
+    font: 700 50px/1.8 "Noto Sans KR";
+  }
+  #header_bottom {
+    height: 900px;
+  }
+  #header_bottom .moveMouse .fa-computer-mouse {
+    top: -60px;
+  }
+  #header_bottom .boxOffice .boxLank {
+    padding-left: 20px;
+  }
+  #header_bottom .boxOffice .boxLank a {
+    font: 400 20px/1 "Noto Sans KR";
+  }
+  #header_bottom .boxOffice .boxMore {
+    padding-right: 20px;
+  }
+  #header_bottom .boxOffice .boxMore a {
+    font: 400 20px/1 "Noto Sans KR";
+  }
+  #header_bottom .boxLank_poster ul li {
+    width: 200px;
+    height: 279px;
+    margin-bottom: 120px;
+  }
+  #header_bottom .boxLank_poster ul li .posterArea img {
+    width: 100%;
   }
 }
 
