@@ -105,6 +105,9 @@ body {
       a {
         margin-right: 20px;
         color: #fff;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
     .headerTop_right {
@@ -113,6 +116,9 @@ body {
       a {
         margin-left: 20px;
         color: #fff;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -405,6 +411,33 @@ body {
       .fa-plus {
         margin-left: 5px;
         color: #aaa;
+      }
+    }
+  }
+  .benefit_area {
+    display: inline-flex;
+    .slider {
+      margin-right: 20px;
+      .slider_01 {
+        ul {
+          .slideTest {
+            width: 460px;
+            height: 560px;
+            background: orange;
+          }
+        }
+      }
+    }
+    .benefit_ad {
+      width: 720px;
+      display: inline-flex;
+      flex-wrap: wrap;
+      // overflow: hidden;
+      div {
+        width: 350px;
+        height: 270px;
+        background: yellowgreen;
+        border: 1px solid red;
       }
     }
   }
